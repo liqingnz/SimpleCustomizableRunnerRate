@@ -1,5 +1,4 @@
-name=My First Mod
+name=Sprinter Rate
 poster=poster.png
-id=MyFirst
-description=Basic example mod
-url=https://theindiestone.com/forums/
+id=SprinterRate
+description=Allow you to adjust sprinter spawn rate

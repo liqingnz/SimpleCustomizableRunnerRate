@@ -1,0 +1,6 @@
+UI_EN = {
+  UI_SprinterRate_OverwriteSystemRate = "Overwrite",
+  UI_SprinterRate_OverwriteSystemRate_Tooltip = "Use custom spawn rate instead of sandbox settings",
+  UI_SprinterRate_SprinterRate = "Sprinter Rate",
+  UI_SprinterRate_SprinterRate_Tooltip = "Sprinter will be spawned at this rate, else Fast Shambler",
+}

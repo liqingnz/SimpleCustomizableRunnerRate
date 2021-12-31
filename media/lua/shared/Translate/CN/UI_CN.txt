@@ -1,0 +1,6 @@
+UI_CN = {
+  UI_SprinterRate_OverwriteSystemRate = "覆盖设定",
+  UI_SprinterRate_OverwriteSystemRate_Tooltip = "覆盖沙盒僵尸生成比例",
+  UI_SprinterRate_SprinterRate = "跑尸比例",
+  UI_SprinterRate_SprinterRate_Tooltip = "跑尸会按照这个比例刷新，其他为快速蹒跚",
+}
