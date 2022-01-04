@@ -9,18 +9,19 @@ SprinterRate = SprinterRate or {}
 SprinterRate.Options = SprinterRate.Options or {}
 
 SprinterRate.Options.overwriteSystemRate = true
-SprinterRate.Options.sprinterRate = 233
+SprinterRate.Options.sprinterRate = 300
 
 if ModOptions and ModOptions.getInstance then
     local sprinterRates = { 0, 100, 200, 233, 300, 400, 500, 600, 700, 800, 900, 1000 }
 
     local function onModOptionsApply(optionValues)
-        if isAdmin() or not isClient() then
+        if true then
+        -- if isAdmin() or not isClient() then
             SprinterRate.Options.overwriteSystemRate = optionValues.settings.options.overwriteSystemRate
             SprinterRate.Options.sprinterRate = sprinterRates[optionValues.settings.options.sprinterRate]
-            -- print("Current sprinter spawn rate " .. SprinterRate.Options.sprinterRate)
+            getPlayer():Say("Current sprinter spawn rate " .. SprinterRate.Options.sprinterRate)
         else
-            print("Cannot edit spawn rate, current rate: " .. SprinterRate.Options.sprinterRate)
+            getPlayer():Say("Cannot edit spawn rate, current rate: " .. SprinterRate.Options.sprinterRate)
         end
     end
 
@@ -36,7 +37,7 @@ if ModOptions and ModOptions.getInstance then
                 OnApplyInGame = onModOptionsApply,
             },
             sprinterRate = {
-                "0%", "10%", "20%", "23.3%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%",
+                "0%", "10%", "20%", "23.3%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "99%",
                 name = "UI_SprinterRate_SprinterRate",
                 tooltip = "UI_SprinterRate_SprinterRate_Tooltip",
                 default = 4,
