@@ -16,14 +16,6 @@ local safeZoneMaxX = 6900
 local safeZoneMinY = 5200
 local safeZoneMaxY = 5600
 
-local function init()
-    if isServer() then
-        print("\n>>>>>>>>>>>>>>>IS_SERVER>>>>>>>>>>>>>>>\n")
-        isServer = true
-    elseif isClient() then
-        print("\n>>>>>>>>>>>>>>>IS_CLIENT>>>>>>>>>>>>>>>\n")
-    end
-end
 
 local function adjustSpawnRate(zed)
     -- if not isServer then
@@ -74,6 +66,15 @@ local function adjustSpawnRate(zed)
     -- end
 end
 
-Events.OnLoad.Add(init)
-Events.OnServerStarted.Add(init)
+-- local function init()
+--     if isServer() then
+--         print("\n>>>>>>>>>>>>>>>IS_SERVER>>>>>>>>>>>>>>>\n")
+--         isServer = true
+--     elseif isClient() then
+--         print("\n>>>>>>>>>>>>>>>IS_CLIENT>>>>>>>>>>>>>>>\n")
+--     end
+-- end
+
+-- Events.OnLoad.Add(init)
+-- Events.OnServerStarted.Add(init)
 Events.OnZombieUpdate.Add(adjustSpawnRate)
